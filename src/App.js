@@ -1,9 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Users from "./user/pages/Users";
+import NewPlace from "./places/pages/NewPlace";
 
-function App() {
-	return <div className="App">Been There</div>;
-}
+const App = () => {
+	return (
+		<Router>
+			<Switch>
+				<Route path="/" component={Users} />
+				<Route path="/places/new" component={NewPlace} />
+			</Switch>
+		</Router>
+	);
+};
 
 export default App;
