@@ -11,7 +11,7 @@ const App = () => {
 			<MainNavigation />
 			<main>
 				<Switch>
-					<Route path="/" component={Users} />
+					<Route exact path="/" component={Users} />
 					<Route path="/places/new" component={NewPlace} />
 				</Switch>
 			</main>
