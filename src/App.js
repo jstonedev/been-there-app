@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
 import MainNavigation from "./shared/components/Navigation/main-navigation/MainNavigation";
+import UserPlaces from "./places/pages/UserPlaces";
 
 const App = () => {
 	return (
@@ -12,7 +13,8 @@ const App = () => {
 			<main>
 				<Switch>
 					<Route exact path="/" component={Users} />
-					<Route path="/places/new" component={NewPlace} />
+					<Route exact path="/:userId/places" component={UserPlaces} />
+					<Route exact path="/places/new" component={NewPlace} />
 				</Switch>
 			</main>
 		</Router>
